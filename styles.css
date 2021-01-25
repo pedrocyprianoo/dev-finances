@@ -128,7 +128,7 @@ a:hover {
 #transaction {
     display: block;
     width: 100%;
-    overflow-x: auto;
+    overflow-x: auto; 
 }
 
 #transaction h2 {
