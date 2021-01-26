@@ -1,8 +1,8 @@
 /*Global -------------------------------------*/
 :root {
-    --principal: #8257e5;
-    --secundaria: #8257a8;
-    --dark-blue: #363f5f;
+    --principal: #8257e5; 
+    --secundaria: #8050f0;
+    --cancel: #e92929;
 }
 
 * {
@@ -16,7 +16,7 @@ html {
 }
 
 body {
-    background: #111111;
+    background: snow;
     font-family:'Montserrat', Courier, monospace;
 }
 
@@ -43,7 +43,7 @@ body {
 h2 {
     margin-top: 3.2rem;
     margin-bottom: 0.8rem;
-    color: var(--dark-blue);
+    color: var(--principa);
 
     font-weight: normal;
 }
@@ -51,8 +51,8 @@ h2 {
 
 /* Header -------------------------------------*/
 header {
-    background: var(--principal);
-    padding: 2rem 0 10rem;
+    background: var(--secundaria);
+    padding: 2rem 0 11rem;
     text-align: center; 
 }
 
@@ -72,10 +72,44 @@ a:hover {
     color: var(--secundaria);
 }
 
+button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    color: snow;
+    background-color: var(--principal);
+    padding: 0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--secundaria);
+}
+
+
 .button.new {
     display: inline-block;
     margin-bottom: .8rem;
 }
+
+.button.cancel {
+    color: var(--cancel);
+    border: 2px var(--cancel) solid;
+    border-radius: 0.25rem;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0.5;
+}
+
+.button.cancel:hover {
+    opacity: 1;
+}
+/* Links and Buttons --------------------------*/
 
 
 
@@ -89,6 +123,7 @@ a:hover {
     color: white;
     margin-top: 0;    
 }
+/* Section Balance ----------------------------*/
 
 /* Cards -------------------------------*/
 .card {
@@ -96,13 +131,12 @@ a:hover {
     padding: 2rem 2rem; /*1.5rem*/
     border-radius: 0.25rem; /*Bordinha arredondada*/
     margin-bottom: 2rem;
-    color: var(--dark-blue);
+    color: var(--principal);
 }
 
 .card h3 {
     font-weight: normal; /*Peso*/
     font-size: 1rem; /*Tamanho*/
-
     display: flex; /*Um elemento ao lado do outro*/
     align-items: center;
     justify-content: space-between;
@@ -135,12 +169,13 @@ a:hover {
     color: white;
     margin-top: 0;
 }
+/* Cards -------------------------------*/
 
 /* Table -------------------------------*/
 #data-table {
     width: 100%;
     border-spacing: 0 0.5rem;
-    color: #969cb3;
+    color: var(--principal);
 }
 
 table thead tr th:first-child,
@@ -167,13 +202,14 @@ table tbody tr:hover {
     opacity: 1;
 }
 
+
 table tbody td{
     background: white;
     padding: 1rem 2rem;
 }
 
 td.description{ /*Table - Descrições da tabela*/
-    color: var(--dark-blue);
+    color: var(--principal);
 }
 
 td.income { /*Table - Entradas*/
@@ -183,18 +219,100 @@ td.income { /*Table - Entradas*/
 td.expense{ /*Table - Saídas*/
     color: #e92929;
 }
+/* Table -------------------------------*/
+
+/* Modal --------------------------------*/
+.modal-overlay {
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: #f0f2f5;
+    padding: 2.4rem;
+}
+/* Modal --------------------------------*/
+
+/* Form --------------------------------*/
+#form {
+    max-width: 500px;
+}
+
+#form h2 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: var(--principal);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#form img {
+    width: 24px;
+    height: 24px;
+    color: var(--principal);
+    cursor: pointer;
+}
+
+input {
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.8rem;
+    width: 100%;
+}
+
+.input-group {
+    margin-top: 0.8rem;
+}
+
+.input-group small {
+    opacity: 0.4;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group.actions .button,
+.input-group.actions button {
+    width: 48%;
+}
+/* Form --------------------------------*/
+
+
 
 /* Footer -------------------------------*/
 footer {
     text-align: center;
+    justify-items: center;
     padding: 4rem 0 2rem;
-    color: white;
-    text-decoration: none;
-    opacity: 0.6;
 }
 
-footer p{
-    display: inline;
+footer img {
+    width: 80px;
+    height: 80px;
 }
 /* Footer -------------------------------*/
 
@@ -208,5 +326,13 @@ footer p{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr; /*repeat(3, 1fr);*/
         gap: 2rem; /*Espaços*/
+    }
+
+    .card {
+        border-bottom: 2px var(--principal) solid;
+    } 
+
+    .card.total {
+        border-top: 2px snow solid;
     }
 }
