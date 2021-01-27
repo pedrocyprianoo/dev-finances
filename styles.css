@@ -95,7 +95,7 @@ button:hover {
 
 .button.cancel {
     color: var(--cancel);
-    border: 2px var(--cancel) solid;
+    border: 2px var(--cancel), solid;
     border-radius: 0.25rem;
     height: 50px;
 
@@ -130,7 +130,7 @@ button:hover {
     background: white;
     padding: 2rem 2rem; /*1.5rem*/
     border-radius: 0.25rem; /*Bordinha arredondada*/
-    border-bottom: 2px var(--principal) solid;
+    border-bottom: 2px var(--principal), solid;
     margin-bottom: 2rem;
     color: var(--principal);
 }
