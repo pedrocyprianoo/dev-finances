@@ -95,7 +95,7 @@ button:hover {
 
 .button.cancel {
     color: var(--cancel);
-    border: 2px var(--cancel), solid;
+    border: 2px var(--cancel) solid;
     border-radius: 0.25rem;
     height: 50px;
 
