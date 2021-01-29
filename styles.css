@@ -143,7 +143,6 @@ button:hover {
     display: flex; /*Um elemento ao lado do outro*/
     align-items: center;
     justify-content: space-between;
-
 }
 
 .card p {
@@ -173,9 +172,25 @@ button:hover {
     margin-top: 0;
 }
 
-#transaction img {
+.newtransaction {
+    font-weight: 700;
+    display: flex;
     color: var(--principal);
 }
+
+#newtransactionlink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newtransaction img {
+    padding-left: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+
 /* Cards -------------------------------*/
 
 /* Table -------------------------------*/
@@ -268,9 +283,6 @@ td.expense{ /*Table - Saídas*/
     margin-top: 0;
     margin-bottom: 2rem;
     color: var(--principal);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 #form img {
