@@ -27,7 +27,7 @@
                     <span>Entradas</span>
                     <img src="./assets/income.svg" alt="Imagem de entradas">
                 </h3>
-                <p>R$ 5.000,00</p>
+                <p id="incomeDisplay"></p>
             </div>
             <!--Segundo Card-->
             <div class="card">
@@ -35,7 +35,7 @@
                     <span>Saídas</span>
                     <img src="./assets/expense.svg" alt="Imagem de saídas">
                 </h3>
-                <p>R$ 5.000,00</p>
+                <p id="expenseDisplay"></p>
             </div>
             <!--Terceiro Card-->
             <div class="card total">
@@ -43,7 +43,7 @@
                     <span>Total</span>
                     <img src="./assets/total.svg" alt="Imagem de total">
                 </h3>
-                <p>R$ 5.000,00</p>
+                <p id="totalDisplay"></p>
             </div>
         </section>
 
@@ -81,7 +81,7 @@
                 <h2>
                     <span>Nova Transação</span>
                 </h2>
-                <form action="">
+                <form action="" onsubmit="Form.submit(event)">
                     <!--Input Descrição-->
                     <div class="input-group">
                         <label class="sr-only" for="description">
